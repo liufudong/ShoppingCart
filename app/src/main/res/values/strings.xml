@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ShoppingCart</string>
+    <string name="toSettleAccounts">去结算(%1$s)</string>
+    <string name="totalPrice">¥%1$s</string>
+    <string name="comePay">立即购买</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="done">完成</string>
+</resources>

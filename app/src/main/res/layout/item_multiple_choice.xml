@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_multiple_choice"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                style="@style/checkBox"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@mipmap/round_check_active"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/mImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/mRelativeLayout"
+            android:src="@mipmap/icon_strawberry" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/mImageView"
+            android:text="1"
+            android:textColor="#ff999999"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/mImageView"
+            android:text="2"
+            android:textColor="@color/colorMain"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/cutImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="14dp"
+            android:layout_toLeftOf="@id/numberTextView"
+            android:src="@mipmap/icon_cut"
+            android:textColor="#ff999999"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/numberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginTop="14dp"
+            android:layout_toLeftOf="@id/plusImageView"
+            android:background="@mipmap/icon_number"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#ff999999"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/plusImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="14dp"
+            android:src="@mipmap/icon_plus"
+            android:text="+"
+            android:textColor="#ff999999"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+</layout>

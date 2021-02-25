@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mModel"
+            type="com.liufd.shoppingcart.model.ShoppingCartModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="购物车" />
+
+        <TextView
+            android:id="@+id/editTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="@{mModel.editString}"
+            android:textColor="@{mModel.editColor}"
+            android:onClick="@{()->mModel.editBindingCommand()}" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/editTextView"
+            android:background="@color/colorShoppingCart" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorShoppingCart"
+            android:paddingBottom="5dp"
+            android:layout_above="@id/mAllTextView"
+            android:layout_below="@id/view"
+            android:paddingTop="5dp" />
+
+
+        <TextView
+            android:id="@+id/mAllTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:drawablePadding="16dp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@mipmap/round_check_selected"
+            android:text="全选"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            android:onClick="@{()->mModel.checkAllBindingCommand()}" />
+
+        <TextView
+
+            android:layout_toRightOf="@id/mAllTextView"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="合计："
+            android:textColor="#000000"
+            android:textSize="14dp"
+            binding:isVisible="@{mModel.totalVisibility}" />
+
+        <TextView
+            android:layout_toRightOf="@id/totalTextView"
+            android:layout_toLeftOf="@id/submitButton"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/moneyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textColor="@color/colorMain"
+            android:text="@={mModel.totalPriceString}"
+            android:textSize="16dp"
+            binding:isVisible="@{mModel.totalVisibility}" />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/submitButton"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:background="@color/colorMain"
+            android:text="@={mModel.toSettleAccountsString}"
+            android:textColor="@color/white"
+            android:onClick="@{()->mModel.deleteBindingCommand()}" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="checkBox">
+        <item name="android:textColor">#ff999999</item>
+        <item name="android:button">@null</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">23dp</item>
+        <item name="android:layout_height">23dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+    <style name="MyDialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 还可以加入一些弹出和退出的动画 (lan)-->
+
+    </style>
+    <style name="my_center_dialogAnim" parent="android:Animation"></style>
+    <style name="my_pickerview_dialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+</resources>
