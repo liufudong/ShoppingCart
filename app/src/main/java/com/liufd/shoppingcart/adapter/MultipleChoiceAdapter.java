@@ -22,6 +22,10 @@ public abstract class MultipleChoiceAdapter extends RecyclerView.Adapter {
     private List<ShoppingCartBean.ItemsBean> mList;
 
 
+
+
+
+
     public List<ShoppingCartBean.ItemsBean> getList() {
         return mList;
     }
